@@ -1,0 +1,46 @@
+{
+  "agent": {
+    "name": "Fetch MCP Server",
+    "version": "1.0.0",
+    "description": "Fetches web content and converts it to markdown format. Deployed on Railway.",
+    "author": "Michelle Chang",
+    "homepage": "https://github.com/michellechang77/mit_ai_agents_hw3",
+    "license": "MIT"
+  },
+  "capabilities": {
+    "protocols": ["MCP"],
+    "tools": [
+      {
+        "name": "fetch",
+        "description": "Fetches URL content and extracts as markdown",
+        "parameters": {
+          "url": {
+            "type": "string",
+            "description": "URL to fetch",
+            "required": true
+          }
+        }
+      }
+    ]
+  },
+  "endpoints": {
+    "mcp": {
+      "url": "https://mitaiagentshw3-production.up.railway.app",
+      "transport": "stdio",
+      "authentication": {
+        "type": "none",
+        "required": false
+      }
+    }
+  },
+  "metadata": {
+    "category": "web",
+    "tags": ["web-scraping", "fetch", "markdown", "railway"],
+    "deployed_on": "Railway",
+    "tested_in": ["Claude Desktop"]
+  },
+  "contacts": {
+    "github": "https://github.com/michellechang77"
+  },
+  "updated_at": "2025-09-28T00:00:00Z"
+}
