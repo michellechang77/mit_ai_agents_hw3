@@ -1,0 +1,17 @@
+{
+  "phases": {
+    "setup": {
+      "nixPkgs": ["python311"]
+    },
+    "install": {
+      "cmds": [
+        "curl -LsSf https://astral.sh/uv/install.sh | sh",
+        "export PATH=\"$HOME/.cargo/bin:$PATH\"",
+        "uv sync"
+      ]
+    }
+  },
+  "start": {
+    "cmd": "$HOME/.cargo/bin/uv run python -m mcp_server_fetch"
+  }
+}
